@@ -1,0 +1,8 @@
+/* variables.module.scss */
+$primary-color: #0859d3;
+$secondary-color: #2ad38b;
+
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+}
