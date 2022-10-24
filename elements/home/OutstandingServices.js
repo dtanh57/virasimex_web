@@ -2,12 +2,14 @@ import {Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from '@m
 import {Box} from '@mui/system';
 import React from 'react';
 import AppAnimationWhenVisible from '../../src/AppAnimationWhenVisible';
+import useTrans from '../../src/hooks/useTrans';
 
 export default function OutstandingServices({data}) {
+  const {Strings} = useTrans();
   return (
     <Box sx={{py: 4}}>
-      <Typography fontWeight='bold' variant='h5' textAlign='center' sx={{mb: 2}}>
-        Dịch vụ nổi bật
+      <Typography fontWeight='bold' variant='h1' textAlign='center' sx={{mb: 2}}>
+        {Strings.outstandingService}
       </Typography>
       <Grid container justifyContent='center' width='100%'>
         <Grid item container justifyContent='center' sx={{width: {md: '80%', xs: '100%'}}}>

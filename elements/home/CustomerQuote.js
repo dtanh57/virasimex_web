@@ -2,8 +2,11 @@ import {Avatar, Box, Grid, Typography} from '@mui/material';
 import React from 'react';
 import AppAnimationWhenVisible from '../../src/AppAnimationWhenVisible';
 import AppSwiper from '../../src/AppSwiper';
+import useTrans from '../../src/hooks/useTrans';
 
 export default function CustomerQuote({data}) {
+  const {Strings} = useTrans();
+
   const renderItem = (itm) => {
     return (
       <Box sx={{width: '80%'}}>
@@ -43,8 +46,8 @@ export default function CustomerQuote({data}) {
 
   return (
     <Box sx={{p: 4}}>
-      <Typography fontWeight='bold' variant='h5' textAlign='center' sx={{mb: 4}}>
-        Khách hàng nói gì về chúng tôi
+      <Typography fontWeight='bold' variant='h1' textAlign='center' sx={{mb: 4}}>
+        {Strings.customerQuote}
       </Typography>
       <Grid container justifyContent='center' sx={{width: '100%'}}>
         <Grid item sx={{width: {xs: '100%', lg: '50%', md: '80%'}}}>

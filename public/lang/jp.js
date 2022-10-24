@@ -6,5 +6,9 @@ export default {
   recruit: 'Recruit',
   vietnamese: 'Vietnamese',
   japanese: 'Japanese',
-  language: "Language"
+  language: 'Language',
+  outstandingService: 'Outstanding Service',
+  featuredNews: 'Featured News',
+  customerQuote: 'Customer Quote',
+  partners: 'Partners'
 };

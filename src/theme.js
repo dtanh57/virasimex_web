@@ -13,6 +13,17 @@ const theme = createTheme({
     error: {
       main: red.A400
     }
+  },
+  typography: {
+    h1: {
+      fontSize: '2em'
+    },
+    h2: {
+      fontSize: '1.8rem'
+    },
+    h3: {
+      fontSize: '1.6rem'
+    }
   }
 });
 

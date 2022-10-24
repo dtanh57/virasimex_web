@@ -2,8 +2,10 @@ import {Box, Typography} from '@mui/material';
 import React from 'react';
 import AppAnimationWhenVisible from '../../src/AppAnimationWhenVisible';
 import AppSwiper from '../../src/AppSwiper';
+import useTrans from '../../src/hooks/useTrans';
 
 export default function Partners({data}) {
+  const {Strings} = useTrans();
   const renderItem = (itm) => {
     return (
       <AppAnimationWhenVisible>
@@ -15,7 +17,7 @@ export default function Partners({data}) {
   return (
     <Box sx={{width: '100%', justifyContent: 'center', p: 4}}>
       <Typography fontWeight='bold' variant='h5' textAlign='center' sx={{mb: 4}}>
-        Đối tác
+        {Strings.partners}
       </Typography>
       <AppSwiper
         data={data}

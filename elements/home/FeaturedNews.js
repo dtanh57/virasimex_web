@@ -2,12 +2,15 @@ import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography} fro
 import {Box} from '@mui/system';
 import React from 'react';
 import AppAnimationWhenVisible from '../../src/AppAnimationWhenVisible';
+import useTrans from '../../src/hooks/useTrans';
 
 export default function FeaturedNews({data}) {
+  const {Strings} = useTrans();
+
   return (
     <Box sx={{py: 4}}>
-      <Typography fontWeight='bold' variant='h5' textAlign='center' sx={{mb: 2}}>
-        Tin tức nổi bật
+      <Typography fontWeight='bold' variant='h1' textAlign='center' sx={{mb: 2}}>
+        {Strings.featuredNews}
       </Typography>
       <Grid container justifyContent='center' width='100%'>
         <Grid item container justifyContent='center' sx={{width: {md: '80%', xs: '100%'}}}>
