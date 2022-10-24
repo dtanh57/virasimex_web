@@ -14,18 +14,18 @@ export default function Index({data}) {
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta property='og:title' content='Vinasimex home page' key='Vinasimex home page' />
       </Head>
-      {/* <Home data={data} /> */}
+      <Home data={data} />
     </AppLayout>
   );
 }
 
-// export async function getStaticProps() {
-//   const res = await fetch(process.env.REACT_APP_API + '/api/home');
-//   const data = await res.json();
+export async function getStaticProps() {
+  const res = await fetch(process.env.REACT_APP_API + '/api/home');
+  const data = await res.json();
 
-//   return {
-//     props: {
-//       data
-//     }
-//   };
-// }
+  return {
+    props: {
+      data
+    }
+  };
+}
