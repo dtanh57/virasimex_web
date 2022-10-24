@@ -11,9 +11,9 @@ export default function FeaturedNews({data}) {
       </Typography>
       <Grid container justifyContent='center' width='100%'>
         <Grid item container justifyContent='center' sx={{width: {md: '80%', xs: '100%'}}}>
-          {data.map((item) => {
+          {data.map((item, index) => {
             return (
-              <Grid item>
+              <Grid key={`${index}`} item>
                 <AppAnimationWhenVisible>
                   <Card sx={{maxWidth: 345, m: 2}}>
                     <CardMedia component='img' height='140' image={item.img} alt={item.title} />

@@ -27,7 +27,7 @@ export default function AppImageSwiper({data}) {
         disableOnInteraction: false
       }}
     >
-      {data.map((itm, idx) => {
+      {data?.map?.((itm, idx) => {
         return (
           <SwiperSlide key={idx} style={{height: '100%'}}>
             <Image src={itm.img} layout='fill' objectFit='initial' />

@@ -6,7 +6,7 @@ import ForwardIcon from '@mui/icons-material/Forward';
 export default function BlockBanner({data}) {
   return (
     <>
-      {data.map((item, index) => {
+      {(data || []).map((item, index) => {
         return (
           <Grid key={`${index}`} container sx={{p: 10, backgroundColor: item.backgroundColor}}>
             <Grid

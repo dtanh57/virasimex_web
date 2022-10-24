@@ -11,9 +11,9 @@ export default function OutstandingServices({data}) {
       </Typography>
       <Grid container justifyContent='center' width='100%'>
         <Grid item container justifyContent='center' sx={{width: {md: '80%', xs: '100%'}}}>
-          {data.map((item) => {
+          {data.map((item, index) => {
             return (
-              <Grid item sx={{mx: 2}}>
+              <Grid key={`${index}`} item sx={{mx: 2}}>
                 <AppAnimationWhenVisible>
                   <Card sx={{maxWidth: 345}}>
                     <CardActionArea>
