@@ -23,12 +23,12 @@ export default function BlockBanner({data}) {
             </Grid>
             <Grid item lg={6} xs={12} alignSelf='center'>
               <AppAnimationWhenVisible>
-                <Typography variant='h4' fontWeight='bold' sx={{mb: 2, color: item.textColor}}>
+                <Typography variant='h1' fontWeight='bold' sx={{mb: 2, color: item.textColor}}>
                   {item.title}
                 </Typography>
               </AppAnimationWhenVisible>
               <AppAnimationWhenVisible>
-                <Typography variant='subtitle1' sx={{color: item.textColor, mb: 2}}>
+                <Typography variant='h5' sx={{color: item.textColor, mb: 2}}>
                   {item.content}
                 </Typography>
               </AppAnimationWhenVisible>
