@@ -38,7 +38,7 @@ export default function Index({ data }) {
           content="ベトナム送り出し機関の老舗として当校は軌道整備保全に求められるサービスを創造して行きます。当校のプログラムは柔軟性に富み、教鞭をとるのは専任講師たちばかりです。詳細については直接お問い合わせください。"
         />
       </Head>
-      <Home data={data} />
+      {/* <Home data={data} /> */}
     </AppLayout>
   );
 }
