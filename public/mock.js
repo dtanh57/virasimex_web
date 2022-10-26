@@ -1,8 +1,14 @@
 export const dataHome = {
   dataCarouselBanner: [
-    { img: "http://i.imgur.com/iiF8EWE.png" },
-    { img: "https://i.imgur.com/AYPwacF.png" },
-    { img: "https://pbs.twimg.com/media/EcMOndzWoAI0yxf.jpg" },
+    {
+      img: "https://static.wixstatic.com/media/8949f6_d6704a6d683f4b4b83c6e027322f7a80~mv2.jpg",
+    },
+    {
+      img: "https://static.wixstatic.com/media/8949f6_bc6a8167fd2d452d910775bd1ed0453d~mv2.jpg",
+    },
+    {
+      img: "https://static.wixstatic.com/media/8949f6_633d6dc5cdf8459aa24ba2c84f5f3d60~mv2.jpg",
+    },
   ],
   dataBlockBanner: [
     {

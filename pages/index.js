@@ -6,7 +6,6 @@ import AppLayout from "../src/AppLayout";
 import useTrans from "../src/hooks/useTrans";
 
 export default function Index({ data }) {
-  console.log("213m", data);
   const { Strings } = useTrans();
 
   return (
@@ -18,7 +17,16 @@ export default function Index({ data }) {
           name="description"
           content="ベトナム送り出し機関の老舗として当校は軌道整備保全に求められるサービスを創造して行きます。当校のプログラムは柔軟性に富み、教鞭をとるのは専任講師たちばかりです。詳細については直接お問い合わせください。"
         />
-        <meta property="og:error" content="Error virasimex web" />
+        <meta
+          property="og:error"
+          content="Vinasimex Og metadata is not valid"
+        />
+        <meta
+          property="og:image"
+          content="https://static.wixstatic.com/media/8949f6_bc08f81190014dd9ba1f39b6bfd97d74~mv2.jpg/v1/fill/w_2500,h_1991,al_c/8949f6_bc08f81190014dd9ba1f39b6bfd97d74~mv2.jpg"
+        />
+        <meta property="og:image:width" content="2500" />
+        <meta property="og:image:height" content="1991" />
         <meta
           property="og:title"
           content="トップ | ヴィラシメックス/VIRASIMEX"
