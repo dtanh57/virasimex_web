@@ -1,10 +1,12 @@
 import Head from "next/head";
 import * as React from "react";
 import Home from "../elements/home/Home";
+import { dataHome } from "../public/mock";
 import AppLayout from "../src/AppLayout";
 import useTrans from "../src/hooks/useTrans";
 
 export default function Index({ data }) {
+  console.log("213m", data);
   const { Strings } = useTrans();
 
   return (
@@ -38,14 +40,18 @@ export default function Index({ data }) {
           content="ベトナム送り出し機関の老舗として当校は軌道整備保全に求められるサービスを創造して行きます。当校のプログラムは柔軟性に富み、教鞭をとるのは専任講師たちばかりです。詳細については直接お問い合わせください。"
         />
       </Head>
-      {/* <Home data={data} /> */}
+      <Home data={data} />
     </AppLayout>
   );
 }
 
 export async function getStaticProps() {
   const res = await fetch(process.env.REACT_APP_API + "/api/home");
-  const data = await res.json();
+  let data = {};
+  if (res.dataCarouselBanner) {
+    data = await res.json();
+  }
+  data = dataHome;
 
   return {
     props: {
