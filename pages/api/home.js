@@ -65,9 +65,6 @@ export default function home(req, res) {
       {
         img: "https://static.wixstatic.com/media/8949f6_d6704a6d683f4b4b83c6e027322f7a80~mv2.jpg",
       },
-      {
-        img: "https://static.wixstatic.com/media/8949f6_d6704a6d683f4b4b83c6e027322f7a80~mv2.jpg",
-      },
     ],
     dataCustomerQuote: [
       {
