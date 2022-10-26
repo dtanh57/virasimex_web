@@ -1,39 +1,42 @@
-import {createTheme} from '@mui/material/styles';
-import {red} from '@mui/material/colors';
+import { createTheme } from "@mui/material/styles";
+import { red } from "@mui/material/colors";
 
 // Create a theme instance.
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#556cd6'
+      main: "#0652a2",
     },
     secondary: {
-      main: '#19857b'
+      main: "#19857b",
     },
     error: {
-      main: red.A400
-    }
+      main: red.A400,
+    },
+    red_app: {
+      main: "#e40a10",
+    },
   },
   typography: {
     h1: {
-      fontSize: '2.25rem'
+      fontSize: "2.25rem",
     },
     h2: {
-      fontSize: '1.875rem'
+      fontSize: "1.875rem",
     },
     h3: {
-      fontSize: '1.6rem'
+      fontSize: "1.6rem",
     },
     h4: {
-      fontSize: '1.4rem'
+      fontSize: "1.4rem",
     },
     h5: {
-      fontSize: '1.2rem'
+      fontSize: "1.2rem",
     },
     h6: {
-      fontSize: '1rem'
-    }
-  }
+      fontSize: "1rem",
+    },
+  },
 });
 
 export default theme;
