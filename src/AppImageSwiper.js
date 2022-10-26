@@ -13,7 +13,6 @@ import { Box } from "@mui/system";
 export default function AppImageSwiper({ data }) {
   return (
     <Swiper
-      // style={{ width: "100%", aspectRatio: 4 }}
       spaceBetween={30}
       speed={1500}
       effect={"fade"}
@@ -31,9 +30,7 @@ export default function AppImageSwiper({ data }) {
       {data?.map?.((itm, idx) => {
         return (
           <SwiperSlide key={idx} style={{ height: "100%" }}>
-            <Box
-              sx={{ width: "100vw", height: "56.25vw", backgroundColor: "red" }}
-            >
+            <Box sx={{ width: "100vw", height: "56.25vw" }}>
               <Image src={itm.img} layout="fill" />
             </Box>
           </SwiperSlide>
