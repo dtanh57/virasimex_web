@@ -1,7 +1,6 @@
 import { Container } from "@mui/system";
 import React from "react";
 import BlockBanner from "./BlockBanner";
-import BlockImages from "./BlockImages";
 import CustomerQuote from "./CustomerQuote";
 import Partners from "./Partners";
 import FeaturedNews from "./FeaturedNews";
@@ -17,7 +16,6 @@ export default function Home({ data }) {
       <CustomerQuote data={data?.dataCustomerQuote} />
       <Partners data={data?.dataPartners} />
       <FeaturedNews data={data?.dataFeaturedNews} />
-      <BlockImages data={data?.dataBlockImages} />
     </Container>
   );
 }
