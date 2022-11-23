@@ -1,6 +1,6 @@
 import {Container} from "@mui/system";
 import React from "react";
-import BlockBanner from "./BlockBanner";
+import SelectionReason from "./SelectionReason";
 import CustomerQuote from "./CustomerQuote";
 import Partners from "./Partners";
 import FeaturedNews from "./FeaturedNews";
@@ -13,7 +13,7 @@ export default function Home({data}) {
     <Container maxWidth={false} style={{paddingLeft: 0, paddingRight: 0}}>
       <AppImageSwiper />
       <Description data={data?.dataDescription} />
-      <BlockBanner data={data?.dataBlockBanner} />
+      <SelectionReason />
       <OutstandingServices data={data?.dataOutstandingServices} />
       <CustomerQuote data={data?.dataCustomerQuote} />
       <Partners data={data?.dataPartners} />

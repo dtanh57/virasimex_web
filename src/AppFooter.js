@@ -23,7 +23,7 @@ export default function AppFooter() {
       <Box
         sx={{
           display: "flex",
-          bgcolor: "primary.main",
+          bgcolor: '#f3f4f6',
           justifyContent: "center",
           pt: 2,
           width: "100%",
@@ -38,10 +38,10 @@ export default function AppFooter() {
               width={100}
               height={100}
             />
-            <Typography color="white" fontSize="1.4em" sx={{mt: -3}}>
+            <Typography fontSize="1.4em" sx={{mt: -3}}>
               {Strings.companyName || "VIRASIMEX"}
             </Typography>
-            <Typography color="white" fontSize={".7em"}>
+            <Typography fontSize={".7em"}>
               Railway Import - Export and Supply Material Equipment Joint Stock
               Company
             </Typography>
@@ -73,9 +73,9 @@ export default function AppFooter() {
                     key={`${item.label}`}
                     sx={{my: 2, width: "fit-content"}}
                   >
-                    <Icon sx={{color: "white"}} />
+                    <Icon />
                     <ListItemText
-                      sx={{m: 0, ml: 1, color: "white"}}
+                      sx={{m: 0, ml: 1}}
                       primary={item.label}
                     />
                   </ListItem>
@@ -90,13 +90,11 @@ export default function AppFooter() {
                 return (
                   <ListItemText
                     key={`${item.label}`}
-                    color="white"
                     sx={{
                       my: 2,
                       ml: 2,
                       cursor: "pointer",
                       width: "fit-content",
-                      color: "white",
                     }}
                     onClick={() => push(item.value)}
                     primary={item.label}
