@@ -1,16 +1,18 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { EffectFade, Navigation, Pagination, Autoplay } from "swiper";
+import {EffectFade, Navigation, Pagination, Autoplay} from "swiper";
 import Image from "next/image";
-import { Box } from "@mui/system";
+import {Box} from "@mui/system";
 
-export default function AppImageSwiper({ data }) {
+export default function AppImageSwiper() {
+  const images = ['/virasimex_banner_1.jpeg', '/virasimex_banner_2.jpeg', '/virasimex_banner_3.jpeg', '/virasimex_banner_4.jpeg', '/virasimex_banner_5.jpeg', '/virasimex_banner_6.jpeg', '/virasimex_banner_7.jpeg', '/virasimex_banner_8.jpeg'];
+
   return (
     <Swiper
       spaceBetween={30}
@@ -27,11 +29,11 @@ export default function AppImageSwiper({ data }) {
         disableOnInteraction: false,
       }}
     >
-      {data?.map?.((itm, idx) => {
+      {images?.map?.((itm, idx) => {
         return (
-          <SwiperSlide key={idx} style={{ height: "100%" }}>
-            <Box sx={{ width: "100vw", height: "56.25vw" }}>
-              <Image src={itm.img} layout="fill" />
+          <SwiperSlide key={idx} style={{height: "100%"}}>
+            <Box sx={{width: "100vw", height: "56.25vw"}}>
+              <Image src={itm} layout="fill" />
             </Box>
           </SwiperSlide>
         );

@@ -12,19 +12,19 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
 import useTrans from "./hooks/useTrans";
-import { Grid, useTheme } from "@mui/material";
+import {Grid, useTheme} from "@mui/material";
 
 export default function AppHeader() {
-  const { Strings, changeLanguage, language, push } = useTrans();
+  const {Strings, changeLanguage, language, push} = useTrans();
   const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const pages = [
-    { label: Strings.home, value: "/home" },
-    { label: Strings.service, value: "/service" },
-    { label: Strings.newAndBlog, value: "/service" },
-    { label: Strings.portfolio, value: "/newAndBlog" },
-    { label: Strings.recruit, value: "/rescruit" },
+    {label: Strings.home, value: "/home"},
+    {label: Strings.service, value: "/service"},
+    {label: Strings.newAndBlog, value: "/service"},
+    {label: Strings.portfolio, value: "/newAndBlog"},
+    {label: Strings.recruit, value: "/rescruit"},
   ];
   const languages = [
     {
@@ -47,23 +47,24 @@ export default function AppHeader() {
   };
 
   const handleCloseNavMenu = (e) => {
-    e && push({ pathname: e });
+    e && push({pathname: e});
     setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = (lang) => {
-    changeLanguage(lang);
     setAnchorElUser(null);
+    if (typeof lang !== 'string') return;
+    changeLanguage(lang);
   };
 
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: "white" }}>
+    <AppBar position="sticky" sx={{backgroundColor: "white"}}>
       <Container maxWidth={false}>
         <Toolbar disableGutters>
           <Grid
             container
             alignItems="center"
-            sx={{ width: "fit-content", display: { xs: "none", md: "flex" } }}
+            sx={{width: "fit-content", display: {xs: "none", md: "flex"}}}
           >
             <Image
               alt="virasimex logo"
@@ -72,7 +73,7 @@ export default function AppHeader() {
               width={60}
               height={60}
             />
-            <Box sx={{ ml: 1 }}>
+            <Box sx={{ml: 1}}>
               <Typography
                 sx={{
                   mr: 2,
@@ -86,7 +87,7 @@ export default function AppHeader() {
                 color="primary"
                 sx={{
                   mr: 2,
-                  display: { xs: "none", md: "flex", fontSize: "1.1vw" },
+                  display: {xs: "none", md: "flex", fontSize: "1.1vw"},
                 }}
               >
                 鉄道設備輸出入貿易株式会社
@@ -94,7 +95,7 @@ export default function AppHeader() {
             </Box>
           </Grid>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{flexGrow: 1, display: {xs: "flex", md: "none"}}}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -120,7 +121,7 @@ export default function AppHeader() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: {xs: "block", md: "none"},
               }}
             >
               {pages.map((page) => (
@@ -135,7 +136,7 @@ export default function AppHeader() {
               ))}
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <Box sx={{display: {xs: "flex", md: "none"}}}>
             <Image
               alt="virasimex logo"
               href="/"
@@ -148,7 +149,7 @@ export default function AppHeader() {
             sx={{
               flexGrow: 1,
               justifyContent: "center",
-              display: { xs: "none", md: "flex" },
+              display: {xs: "none", md: "flex"},
             }}
           >
             {pages.map((page) => (
@@ -156,23 +157,23 @@ export default function AppHeader() {
                 color="primary"
                 key={page.label}
                 onClick={() => handleCloseNavMenu(page.value)}
-                sx={{ my: 2, display: "block" }}
+                sx={{my: 2, display: "block"}}
               >
                 {page.label}
               </Button>
             ))}
           </Box>
 
-          <Grid container justifyContent="flex-end" sx={{ flex: 1 }}>
+          <Grid container justifyContent="flex-end" sx={{flex: 1}}>
             <Tooltip title="Open language">
-              <Button sx={{ display: "flex" }} onClick={handleOpenUserMenu}>
+              <Button sx={{display: "flex"}} onClick={handleOpenUserMenu}>
                 <Typography
-                  sx={{ mr: 1, textTransform: "none" }}
+                  sx={{mr: 1, textTransform: "none"}}
                   variant="subtitle1"
                 >
                   {Strings.language}
                 </Typography>
-                <Box sx={{ border: "1px solid #d9d9d9", height: 32 }}>
+                <Box sx={{border: "1px solid #d9d9d9", height: 32}}>
                   <Image
                     src={languages.find((itm) => itm.value === language)?.icon}
                     width="40"
@@ -183,7 +184,7 @@ export default function AppHeader() {
               </Button>
             </Tooltip>
             <Menu
-              sx={{ mt: "45px" }}
+              sx={{mt: "45px"}}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
