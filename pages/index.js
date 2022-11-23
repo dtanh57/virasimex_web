@@ -48,7 +48,8 @@ export default function Index({data}) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(process.env.REACT_APP_API + '/api/home');
+  // const res = await fetch(process.env.REACT_APP_API + '/api/home');
+  const res = {};
   let data = {};
   if (res.dataCarouselBanner) {
     data = await res.json();
