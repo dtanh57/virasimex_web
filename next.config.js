@@ -17,16 +17,8 @@ module.exports = {
   },
   images: {
     domains: [
-      "pbs.twimg.com",
-      "i.imgur.com",
-      "rabiloo.com",
-      "images.alphacoders.com",
-      "images2.alphacoders.com",
-      "images3.alphacoders.com",
-      "images4.alphacoders.com",
-      "images7.alphacoders.com",
-      "images8.alphacoders.com",
-      "static.wixstatic.com",
+      "caron.vn",
+      "vamas.com.vn"
     ],
   },
 };

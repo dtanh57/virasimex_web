@@ -41,20 +41,6 @@ export const dataHome = {
         "Very good! I do like it. Very good! I do like it. Very good! I do like it. Very good! I do like it. Very good! I do like it. Very good! I do like it. ",
     },
   ],
-  dataPartners: [
-    {
-      img: "https://caron.vn/upload/image/cache/data/8898c9eed3e316bd4ff2-0e4-200-200.png",
-    },
-    {
-      img: "https://caron.vn/upload/image/cache/data/LogoDAINAM-4c6-200-200.png",
-    },
-    {
-      img: "https://caron.vn/upload/image/cache/data/mau-3-logo-02-f9a-200-200.png",
-    },
-    {
-      img: "https://caron.vn/upload/image/cache/data/8898c9eed3e316bd4ff2-0e4-200-200.png",
-    },
-  ],
   dataFeaturedNews: [
     {
       img: "https://caron.vn/upload/image/cache/data/san-pham/HDD06799-e17-crop-400-225.jpg",

@@ -2,11 +2,11 @@ import {Container} from "@mui/system";
 import React from "react";
 import SelectionReason from "./SelectionReason";
 import CustomerQuote from "./CustomerQuote";
-import Partners from "./Partners";
 import FeaturedNews from "./FeaturedNews";
 import OutstandingServices from "./OutstandingServices";
 import AppImageSwiper from "../../src/AppImageSwiper";
 import Description from './Description';
+import Benefit from './Benefit';
 
 export default function Home({data}) {
   return (
@@ -16,7 +16,7 @@ export default function Home({data}) {
       <SelectionReason />
       <OutstandingServices data={data?.dataOutstandingServices} />
       <CustomerQuote data={data?.dataCustomerQuote} />
-      <Partners data={data?.dataPartners} />
+      <Benefit />
       <FeaturedNews data={data?.dataFeaturedNews} />
     </Container>
   );
